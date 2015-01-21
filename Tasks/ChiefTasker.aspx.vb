@@ -117,4 +117,9 @@ Partial Class Tasks_ChiefTasker
         End Try
 
     End Sub
+
+    Protected Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Page.Response.Redirect("~/main.aspx")
+        Session("TypeCreate") = Nothing
+    End Sub
 End Class
