@@ -1,0 +1,77 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" AutoEventWireup="False" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 120px;
+            height: 89px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <table width="100%">
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <img alt="Web" class="style1" src="/img/web-design.jpg" /></td>
+                            <td valign="top">
+                                <h2>
+                                    Служба поддержки и обслуживания веб сайтов</h2>
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td width="30%" valign="top">
+                    <br/>
+                    <table style="width:100%;">
+                        <tr>
+                            <td colspan="2">
+                                <asp:Label ID="Label1"  runat="server" Text="Авторизация"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="40%">
+                                <asp:Label ID="Label2" runat="server" Text="Логин"></asp:Label>
+                            </td>
+                            <td width="70%">
+                                <asp:TextBox ID="TextBox1" runat="server" Width="90%"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label3" runat="server" Text="Пароль"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="TextBox2" runat="server" Width="90%" TextMode="Password"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                <asp:Button ID="Button2" runat="server" Text="Вход" Width="55px" />
+                                <asp:Button ID="Button3" runat="server" Text="Выход" Width="59px" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
